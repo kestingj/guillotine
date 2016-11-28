@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304081DEBEFD900FF59E3 /* AppDelegate.swift */; };
+		6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883040A1DEBEFD900FF59E3 /* ViewController.swift */; };
+		6883040E1DEBEFD900FF59E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6883040C1DEBEFD900FF59E3 /* Main.storyboard */; };
+		688304101DEBEFD900FF59E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6883040F1DEBEFD900FF59E3 /* Assets.xcassets */; };
+		688304131DEBEFD900FF59E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688304111DEBEFD900FF59E3 /* LaunchScreen.storyboard */; };
+		6883041E1DEBEFD900FF59E3 /* Guillotine_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883041D1DEBEFD900FF59E3 /* Guillotine_Tests.swift */; };
+		688304291DEBEFD900FF59E3 /* Guillotine_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304281DEBEFD900FF59E3 /* Guillotine_UITests.swift */; };
+		688304381DEBF15B00FF59E3 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304371DEBF15B00FF59E3 /* Play.swift */; };
+		6883043A1DEBF18F00FF59E3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304391DEBF18F00FF59E3 /* Card.swift */; };
+		6883043C1DEBF34900FF59E3 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883043B1DEBF34900FF59E3 /* Suit.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6883041A1DEBEFD900FF59E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688303FD1DEBEFD900FF59E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 688304041DEBEFD900FF59E3;
+			remoteInfo = "Guillotine!";
+		};
+		688304251DEBEFD900FF59E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688303FD1DEBEFD900FF59E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 688304041DEBEFD900FF59E3;
+			remoteInfo = "Guillotine!";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		688304051DEBEFD900FF59E3 /* Guillotine!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guillotine!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		688304081DEBEFD900FF59E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6883040A1DEBEFD900FF59E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6883040D1DEBEFD900FF59E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6883040F1DEBEFD900FF59E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		688304121DEBEFD900FF59E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		688304141DEBEFD900FF59E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688304191DEBEFD900FF59E3 /* Guillotine!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guillotine!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6883041D1DEBEFD900FF59E3 /* Guillotine_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guillotine_Tests.swift; sourceTree = "<group>"; };
+		6883041F1DEBEFD900FF59E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688304241DEBEFD900FF59E3 /* Guillotine!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guillotine!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		688304281DEBEFD900FF59E3 /* Guillotine_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guillotine_UITests.swift; sourceTree = "<group>"; };
+		6883042A1DEBEFD900FF59E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688304371DEBF15B00FF59E3 /* Play.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
+		688304391DEBF18F00FF59E3 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		6883043B1DEBF34900FF59E3 /* Suit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		688304021DEBEFD900FF59E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688304161DEBEFD900FF59E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688304211DEBEFD900FF59E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		688303FC1DEBEFD900FF59E3 = {
+			isa = PBXGroup;
+			children = (
+				688304071DEBEFD900FF59E3 /* Guillotine! */,
+				6883041C1DEBEFD900FF59E3 /* Guillotine!Tests */,
+				688304271DEBEFD900FF59E3 /* Guillotine!UITests */,
+				688304061DEBEFD900FF59E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		688304061DEBEFD900FF59E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				688304051DEBEFD900FF59E3 /* Guillotine!.app */,
+				688304191DEBEFD900FF59E3 /* Guillotine!Tests.xctest */,
+				688304241DEBEFD900FF59E3 /* Guillotine!UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		688304071DEBEFD900FF59E3 /* Guillotine! */ = {
+			isa = PBXGroup;
+			children = (
+				688304081DEBEFD900FF59E3 /* AppDelegate.swift */,
+				6883040A1DEBEFD900FF59E3 /* ViewController.swift */,
+				6883040C1DEBEFD900FF59E3 /* Main.storyboard */,
+				6883040F1DEBEFD900FF59E3 /* Assets.xcassets */,
+				688304111DEBEFD900FF59E3 /* LaunchScreen.storyboard */,
+				688304141DEBEFD900FF59E3 /* Info.plist */,
+				688304371DEBF15B00FF59E3 /* Play.swift */,
+				688304391DEBF18F00FF59E3 /* Card.swift */,
+				6883043B1DEBF34900FF59E3 /* Suit.swift */,
+			);
+			path = "Guillotine!";
+			sourceTree = "<group>";
+		};
+		6883041C1DEBEFD900FF59E3 /* Guillotine!Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6883041D1DEBEFD900FF59E3 /* Guillotine_Tests.swift */,
+				6883041F1DEBEFD900FF59E3 /* Info.plist */,
+			);
+			path = "Guillotine!Tests";
+			sourceTree = "<group>";
+		};
+		688304271DEBEFD900FF59E3 /* Guillotine!UITests */ = {
+			isa = PBXGroup;
+			children = (
+				688304281DEBEFD900FF59E3 /* Guillotine_UITests.swift */,
+				6883042A1DEBEFD900FF59E3 /* Info.plist */,
+			);
+			path = "Guillotine!UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		688304041DEBEFD900FF59E3 /* Guillotine! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6883042D1DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "Guillotine!" */;
+			buildPhases = (
+				688304011DEBEFD900FF59E3 /* Sources */,
+				688304021DEBEFD900FF59E3 /* Frameworks */,
+				688304031DEBEFD900FF59E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Guillotine!";
+			productName = "Guillotine!";
+			productReference = 688304051DEBEFD900FF59E3 /* Guillotine!.app */;
+			productType = "com.apple.product-type.application";
+		};
+		688304181DEBEFD900FF59E3 /* Guillotine!Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 688304301DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "Guillotine!Tests" */;
+			buildPhases = (
+				688304151DEBEFD900FF59E3 /* Sources */,
+				688304161DEBEFD900FF59E3 /* Frameworks */,
+				688304171DEBEFD900FF59E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6883041B1DEBEFD900FF59E3 /* PBXTargetDependency */,
+			);
+			name = "Guillotine!Tests";
+			productName = "Guillotine!Tests";
+			productReference = 688304191DEBEFD900FF59E3 /* Guillotine!Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		688304231DEBEFD900FF59E3 /* Guillotine!UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 688304331DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "Guillotine!UITests" */;
+			buildPhases = (
+				688304201DEBEFD900FF59E3 /* Sources */,
+				688304211DEBEFD900FF59E3 /* Frameworks */,
+				688304221DEBEFD900FF59E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				688304261DEBEFD900FF59E3 /* PBXTargetDependency */,
+			);
+			name = "Guillotine!UITests";
+			productName = "Guillotine!UITests";
+			productReference = 688304241DEBEFD900FF59E3 /* Guillotine!UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		688303FD1DEBEFD900FF59E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Joseph Kesting";
+				TargetAttributes = {
+					688304041DEBEFD900FF59E3 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					688304181DEBEFD900FF59E3 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 688304041DEBEFD900FF59E3;
+					};
+					688304231DEBEFD900FF59E3 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 688304041DEBEFD900FF59E3;
+					};
+				};
+			};
+			buildConfigurationList = 688304001DEBEFD900FF59E3 /* Build configuration list for PBXProject "Guillotine!" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 688303FC1DEBEFD900FF59E3;
+			productRefGroup = 688304061DEBEFD900FF59E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				688304041DEBEFD900FF59E3 /* Guillotine! */,
+				688304181DEBEFD900FF59E3 /* Guillotine!Tests */,
+				688304231DEBEFD900FF59E3 /* Guillotine!UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		688304031DEBEFD900FF59E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				688304131DEBEFD900FF59E3 /* LaunchScreen.storyboard in Resources */,
+				688304101DEBEFD900FF59E3 /* Assets.xcassets in Resources */,
+				6883040E1DEBEFD900FF59E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688304171DEBEFD900FF59E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688304221DEBEFD900FF59E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		688304011DEBEFD900FF59E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */,
+				6883043C1DEBF34900FF59E3 /* Suit.swift in Sources */,
+				688304381DEBF15B00FF59E3 /* Play.swift in Sources */,
+				688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */,
+				6883043A1DEBF18F00FF59E3 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688304151DEBEFD900FF59E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6883041E1DEBEFD900FF59E3 /* Guillotine_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688304201DEBEFD900FF59E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				688304291DEBEFD900FF59E3 /* Guillotine_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6883041B1DEBEFD900FF59E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 688304041DEBEFD900FF59E3 /* Guillotine! */;
+			targetProxy = 6883041A1DEBEFD900FF59E3 /* PBXContainerItemProxy */;
+		};
+		688304261DEBEFD900FF59E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 688304041DEBEFD900FF59E3 /* Guillotine! */;
+			targetProxy = 688304251DEBEFD900FF59E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6883040C1DEBEFD900FF59E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6883040D1DEBEFD900FF59E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		688304111DEBEFD900FF59E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				688304121DEBEFD900FF59E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6883042B1DEBEFD900FF59E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6883042C1DEBEFD900FF59E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6883042E1DEBEFD900FF59E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Guillotine!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guillotine.josephkesting.Guillotine-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6883042F1DEBEFD900FF59E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Guillotine!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guillotine.josephkesting.Guillotine-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		688304311DEBEFD900FF59E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Guillotine!Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guillotine.josephkesting.Guillotine-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guillotine!.app/Guillotine!";
+			};
+			name = Debug;
+		};
+		688304321DEBEFD900FF59E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Guillotine!Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guillotine.josephkesting.Guillotine-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guillotine!.app/Guillotine!";
+			};
+			name = Release;
+		};
+		688304341DEBEFD900FF59E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Guillotine!UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guillotine.josephkesting.Guillotine-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Guillotine!";
+			};
+			name = Debug;
+		};
+		688304351DEBEFD900FF59E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Guillotine!UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guillotine.josephkesting.Guillotine-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Guillotine!";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		688304001DEBEFD900FF59E3 /* Build configuration list for PBXProject "Guillotine!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6883042B1DEBEFD900FF59E3 /* Debug */,
+				6883042C1DEBEFD900FF59E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6883042D1DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "Guillotine!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6883042E1DEBEFD900FF59E3 /* Debug */,
+				6883042F1DEBEFD900FF59E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		688304301DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "Guillotine!Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				688304311DEBEFD900FF59E3 /* Debug */,
+				688304321DEBEFD900FF59E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		688304331DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "Guillotine!UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				688304341DEBEFD900FF59E3 /* Debug */,
+				688304351DEBEFD900FF59E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 688303FD1DEBEFD900FF59E3 /* Project object */;
+}
