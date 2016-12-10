@@ -2,9 +2,12 @@
 
 import Foundation
 
-struct Card: Comparable {
+struct Card: Comparable, Hashable {
     var rank: Int
     var suit: Suit
+    var hashValue: Int {
+        return rank + suit.rawValue * 13
+    }
     
     init(rank: Int, suit: Suit) {
         self.rank = rank

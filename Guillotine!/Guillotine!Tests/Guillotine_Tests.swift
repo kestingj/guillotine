@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Guillotine_
 
 class Guillotine_Tests: XCTestCase {
     
