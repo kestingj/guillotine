@@ -10,6 +10,9 @@ class Play {
     }
     
     func isPlayableOn(previousPlay: Play) -> Bool {
+        if previousPlay.cards.count == 0 {
+            return true // starting a new hand
+        }
         let previousType = previousPlay.getPlayType()
         let selfType = self.getPlayType()
         if previousType == selfType {
@@ -18,8 +21,12 @@ class Play {
             if selfType == PlayType.GUILLOTINE {
                 if selfCards.count == 4 && otherCards.count > 4 {
                     return true // 4 of a kind guillotine played on a run guillotine
+                } else if otherCards.count == 4 && selfCards.count > 4 {
+                    return false
                 } else if selfCards.count > otherCards.count {
                     return true //The longer run guillotine always wins
+                } else if selfCards.count < otherCards.count {
+                    return false
                 }
             }
             if selfCards.last! > otherCards.last! {
