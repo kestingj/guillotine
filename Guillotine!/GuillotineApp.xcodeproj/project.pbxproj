@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505B5FB51E012A360086714C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B5FB41E012A360086714C /* Game.swift */; };
+		50FBC2A81E090A2D000E47DA /* Card_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FBC2A71E090A2D000E47DA /* Card_Tests.swift */; };
+		50FBC2AA1E0915BA000E47DA /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FBC2A91E0915BA000E47DA /* CardButton.swift */; };
 		68325C391DF719A300E7DCDE /* PlayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68325C381DF719A300E7DCDE /* PlayType.swift */; };
 		688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304081DEBEFD900FF59E3 /* AppDelegate.swift */; };
 		6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883040A1DEBEFD900FF59E3 /* ViewController.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		505B5FB41E012A360086714C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		50FBC2A71E090A2D000E47DA /* Card_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card_Tests.swift; sourceTree = "<group>"; };
+		50FBC2A91E0915BA000E47DA /* CardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 		68325C381DF719A300E7DCDE /* PlayType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayType.swift; sourceTree = "<group>"; };
 		688304051DEBEFD900FF59E3 /* GuillotineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuillotineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688304081DEBEFD900FF59E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 				688304391DEBF18F00FF59E3 /* Card.swift */,
 				6883043B1DEBF34900FF59E3 /* Suit.swift */,
 				68325C381DF719A300E7DCDE /* PlayType.swift */,
+				505B5FB41E012A360086714C /* Game.swift */,
+				50FBC2A91E0915BA000E47DA /* CardButton.swift */,
 			);
 			name = GuillotineApp;
 			path = "Guillotine!";
@@ -128,6 +136,7 @@
 				6883041D1DEBEFD900FF59E3 /* Guillotine_Tests.swift */,
 				6883041F1DEBEFD900FF59E3 /* Info.plist */,
 				6883043D1DEC210700FF59E3 /* Play_Tests.swift */,
+				50FBC2A71E090A2D000E47DA /* Card_Tests.swift */,
 			);
 			path = "Guillotine!Tests";
 			sourceTree = "<group>";
@@ -276,7 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */,
+				50FBC2AA1E0915BA000E47DA /* CardButton.swift in Sources */,
 				68325C391DF719A300E7DCDE /* PlayType.swift in Sources */,
+				505B5FB51E012A360086714C /* Game.swift in Sources */,
 				6883043C1DEBF34900FF59E3 /* Suit.swift in Sources */,
 				688304381DEBF15B00FF59E3 /* Play.swift in Sources */,
 				688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */,
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FBC2A81E090A2D000E47DA /* Card_Tests.swift in Sources */,
 				6883041E1DEBEFD900FF59E3 /* Guillotine_Tests.swift in Sources */,
 				6883043E1DEC210700FF59E3 /* Play_Tests.swift in Sources */,
 			);

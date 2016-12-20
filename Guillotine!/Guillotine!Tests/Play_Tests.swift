@@ -18,21 +18,21 @@ class Play_Tests: XCTestCase {
     func testRunPlayValid() {
         let shortRun = getRun(startRank: 2, length: 2, suit: Suit.DIAMOND)
         XCTAssertFalse(shortRun.isValidPlay())
-        for i in 3...13 {
+        for i in 3...14 {
             let run = getRun(startRank: 2, length: i, suit: Suit.DIAMOND)
             assertValidPlay(play: run, type: PlayType.RUN)
         }
     }
     
     func testSingleCardValid() {
-        for i in 2...13 {
+        for i in 2...14 {
             let play = Play(cardsToPlay: [Card(rank: i, suit: Suit.SPADE)])
             assertValidPlay(play: play, type: PlayType.SINGLE)
         }
     }
     
     func testPairPlayValid() {
-        for i in 2...13 {
+        for i in 2...14 {
             let play = getPair(rank: i, suits: [Suit.CLUB, Suit.DIAMOND])
             assertValidPlay(play: play, type: PlayType.PAIR)
         }
@@ -40,7 +40,7 @@ class Play_Tests: XCTestCase {
     }
     
     func testTriplePlayValid() {
-        for i in 2...13 {
+        for i in 2...14 {
             let play = getTriple(rank: i)
             assertValidPlay(play: play, type: PlayType.TRIPLE)
         }
@@ -59,7 +59,7 @@ class Play_Tests: XCTestCase {
     }
     
     func testFourOfAKindGuillotine() {
-        for i in 2...13 {
+        for i in 2...14 {
             let play = getFourOfAKindGuillotine(rank: i)
             XCTAssertTrue(play.isGuillotine())
             assertValidPlay(play: play, type: PlayType.GUILLOTINE)
@@ -73,7 +73,7 @@ class Play_Tests: XCTestCase {
         XCTAssertFalse(Play(cardsToPlay: invalidPlay).isValidPlay())
         invalidPlay.append(Card(rank: 2, suit: Suit.CLUB))
         XCTAssertFalse(Play(cardsToPlay: invalidPlay).isValidPlay())
-        invalidPlay.append(Card(rank: 13, suit: Suit.CLUB))
+        invalidPlay.append(Card(rank: 14, suit: Suit.CLUB))
         XCTAssertFalse(Play(cardsToPlay: invalidPlay).isValidPlay())
     }
     
@@ -122,9 +122,9 @@ class Play_Tests: XCTestCase {
     }
     
     func testRunGuillotinePlayable() {
-        let oneAce = Play(cardsToPlay: [Card(rank: 13, suit: Suit.HEART)])
-        let pairAces = getPair(rank: 13, suits: [Suit.SPADE, Suit.CLUB])
-        let tripleAces = getTriple(rank: 13)
+        let oneAce = Play(cardsToPlay: [Card(rank: 14, suit: Suit.HEART)])
+        let pairAces = getPair(rank: 14, suits: [Suit.SPADE, Suit.CLUB])
+        let tripleAces = getTriple(rank: 14)
         
         let lower = getRunGuillotine(startRank: 2, numberOfPairs: 3, suits: [Suit.CLUB, Suit.SPADE])
         let higher = getRunGuillotine(startRank: 3, numberOfPairs: 3, suits: [Suit.CLUB, Suit.SPADE])
@@ -145,9 +145,9 @@ class Play_Tests: XCTestCase {
     
     func testFourOfAKindGuillotinePlayable() {
         let runGuillotine = getRunGuillotine(startRank: 10, numberOfPairs: 3, suits: [Suit.CLUB, Suit.HEART])
-        let oneAce = Play(cardsToPlay: [Card(rank: 13, suit: Suit.HEART)])
-        let pairAces = getPair(rank: 13, suits: [Suit.SPADE, Suit.CLUB])
-        let tripleAces = getTriple(rank: 13)
+        let oneAce = Play(cardsToPlay: [Card(rank: 14, suit: Suit.HEART)])
+        let pairAces = getPair(rank: 14, suits: [Suit.SPADE, Suit.CLUB])
+        let tripleAces = getTriple(rank: 14)
         let lower = getFourOfAKindGuillotine(rank: 3)
         let higher = getFourOfAKindGuillotine(rank: 6)
         assertPlayable(lower: lower, higher: higher)
@@ -169,13 +169,19 @@ class Play_Tests: XCTestCase {
         }
     }
     
-    func testEveryPlayStartable() {
+    func testEveryValidPlayStartable() {
         var plays = getPlayOfEachType()
         let start = Play(cardsToPlay: [Card]())
         plays.append(getFourOfAKindGuillotine(rank: 9))
         for i in 0..<plays.count {
             assertPlayable(lower: start, higher: plays[i])
         }
+    }
+    
+    func testInvalidPlayNotStartable() {
+        let empty = Play(cardsToPlay: [Card]())
+        let invalidPlay = [Card(rank: 2, suit: Suit.SPADE), Card(rank: 4, suit: Suit.SPADE)]
+        XCTAssertFalse(Play(cardsToPlay: invalidPlay).isPlayableOn(previousPlay: empty))
     }
     
     func getPlayOfEachType() -> [Play] {
@@ -247,19 +253,5 @@ class Play_Tests: XCTestCase {
             shuffledList.append(list[index])
         }
         return shuffledList
-    }
-    
-    func randomSuit() -> Suit {
-        let rawValue = Int(arc4random_uniform(UInt32(4)))
-        switch rawValue {
-        case 0:
-            return Suit.SPADE
-        case 0:
-            return Suit.CLUB
-        case 0:
-            return Suit.DIAMOND
-        default:
-            return Suit.HEART
-        }
     }
 }

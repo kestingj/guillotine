@@ -10,6 +10,9 @@ class Play {
     }
     
     func isPlayableOn(previousPlay: Play) -> Bool {
+        if !isValidPlay() {
+            return false
+        }
         if previousPlay.cards.count == 0 {
             return true // starting a new hand
         }
@@ -44,7 +47,7 @@ class Play {
         let otherType = other.getPlayType()
         let firstCard = other.cards[0]
         let singleOrPair = (otherType == PlayType.SINGLE) || (otherType == PlayType.PAIR)
-        let isAce = firstCard.rank == 13
+        let isAce = firstCard.rank == 14
         return singleOrPair && isAce
     }
     
