@@ -6,7 +6,7 @@ class Game {
     
     func getHand() -> [Card] {
         //stub
-        return [Card(rank: 2, suit: Suit.CLUB),
+        return [Card(rank: 2, suit: Suit.SPADE),
                 Card(rank: 2, suit: Suit.SPADE),
                 Card(rank: 3, suit: Suit.CLUB),
                 Card(rank: 3, suit: Suit.SPADE),
@@ -23,5 +23,10 @@ class Game {
     
     func playHand(play: Play) {
         //stub
+    }
+    
+    func getPreviousPlay() -> [Card] {
+        return [Card(rank: 2, suit: Suit.HEART),
+                Card(rank: 2, suit: Suit.DIAMOND)]
     }
 }
