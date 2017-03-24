@@ -4,6 +4,8 @@ import Foundation
 
 class Game {
     
+    static let instance = Game()
+    
     func getHand() -> [Card] {
         //stub
         return [Card(rank: 2, suit: Suit.SPADE),
@@ -22,7 +24,7 @@ class Game {
     }
     
     func playHand(play: Play) {
-        //stub
+        print(play)
     }
     
     func getPreviousPlay() -> [Card] {

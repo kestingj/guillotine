@@ -2,12 +2,13 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         submitPlayButton.isEnabled = false
-        let game = Game()
+        let game = Game.instance
         initializeHand(cards: game.getHand())
         // Do any additional setup after loading the view, typically from a nib.
         populatePreviousPlay(cards: game.getPreviousPlay())
@@ -41,9 +42,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playCards(_ sender: Any) {
-        let alert = UIAlertController(title: "Alert", message: "NOICE", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let game = Game.instance
+        game.playHand(play: getPlayFromContainer(container: playContainer))
     }
     
     func getCardButton(card: Card) -> UIButton {

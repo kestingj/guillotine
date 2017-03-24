@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4174BF77EFB9452EE58220ED /* Pods_GuillotineAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944930E6A718205CFFE6E53E /* Pods_GuillotineAppUITests.framework */; };
+		501FD0D01E5E8A54001F2DF5 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501FD0CF1E5E8A54001F2DF5 /* Backend.swift */; };
 		505B5FB51E012A360086714C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B5FB41E012A360086714C /* Game.swift */; };
 		50FBC2A81E090A2D000E47DA /* Card_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FBC2A71E090A2D000E47DA /* Card_Tests.swift */; };
 		50FBC2AA1E0915BA000E47DA /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FBC2A91E0915BA000E47DA /* CardButton.swift */; };
+		5543D5143BD068178AE1BC1B /* Pods_GuillotineAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFE59CFD91190EB6ED01E32 /* Pods_GuillotineAppTests.framework */; };
 		68325C391DF719A300E7DCDE /* PlayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68325C381DF719A300E7DCDE /* PlayType.swift */; };
 		688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304081DEBEFD900FF59E3 /* AppDelegate.swift */; };
 		6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883040A1DEBEFD900FF59E3 /* ViewController.swift */; };
@@ -22,6 +25,7 @@
 		6883043A1DEBF18F00FF59E3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304391DEBF18F00FF59E3 /* Card.swift */; };
 		6883043C1DEBF34900FF59E3 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883043B1DEBF34900FF59E3 /* Suit.swift */; };
 		6883043E1DEC210700FF59E3 /* Play_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883043D1DEC210700FF59E3 /* Play_Tests.swift */; };
+		DBEFE3B422D25A5507D440D9 /* Pods_GuillotineApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9A50C954D3F39CF519571B /* Pods_GuillotineApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12FE03E090B6046D68AE36FC /* Pods-GuillotineAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuillotineAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuillotineAppUITests/Pods-GuillotineAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1585BCC944747BCD18E709A7 /* Pods-GuillotineAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuillotineAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuillotineAppTests/Pods-GuillotineAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		229575EC56D78167F47B94BC /* Pods-GuillotineApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuillotineApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuillotineApp/Pods-GuillotineApp.release.xcconfig"; sourceTree = "<group>"; };
+		501FD0CF1E5E8A54001F2DF5 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		505B5FB41E012A360086714C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		50FBC2A71E090A2D000E47DA /* Card_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card_Tests.swift; sourceTree = "<group>"; };
 		50FBC2A91E0915BA000E47DA /* CardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
+		5A9A50C954D3F39CF519571B /* Pods_GuillotineApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuillotineApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E9A58B63AF39BD6FB76A5D /* Pods-GuillotineAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuillotineAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuillotineAppUITests/Pods-GuillotineAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68325C381DF719A300E7DCDE /* PlayType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayType.swift; sourceTree = "<group>"; };
 		688304051DEBEFD900FF59E3 /* GuillotineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuillotineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688304081DEBEFD900FF59E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +73,10 @@
 		688304391DEBF18F00FF59E3 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6883043B1DEBF34900FF59E3 /* Suit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
 		6883043D1DEC210700FF59E3 /* Play_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Play_Tests.swift; sourceTree = "<group>"; };
+		6BFE59CFD91190EB6ED01E32 /* Pods_GuillotineAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuillotineAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		944930E6A718205CFFE6E53E /* Pods_GuillotineAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuillotineAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD959B756FDDEF8CE50AAFD /* Pods-GuillotineAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuillotineAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuillotineAppTests/Pods-GuillotineAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD34F640E336000DD7DEFEAC /* Pods-GuillotineApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuillotineApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuillotineApp/Pods-GuillotineApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEFE3B422D25A5507D440D9 /* Pods_GuillotineApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5543D5143BD068178AE1BC1B /* Pods_GuillotineAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4174BF77EFB9452EE58220ED /* Pods_GuillotineAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +114,8 @@
 				6883041C1DEBEFD900FF59E3 /* Guillotine!Tests */,
 				688304271DEBEFD900FF59E3 /* Guillotine!UITests */,
 				688304061DEBEFD900FF59E3 /* Products */,
+				6D67563136B2C8D7A95FED2C /* Pods */,
+				A1D18BE17BB89289F81FB8F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +144,7 @@
 				68325C381DF719A300E7DCDE /* PlayType.swift */,
 				505B5FB41E012A360086714C /* Game.swift */,
 				50FBC2A91E0915BA000E47DA /* CardButton.swift */,
+				501FD0CF1E5E8A54001F2DF5 /* Backend.swift */,
 			);
 			name = GuillotineApp;
 			path = "Guillotine!";
@@ -150,6 +170,29 @@
 			path = "Guillotine!UITests";
 			sourceTree = "<group>";
 		};
+		6D67563136B2C8D7A95FED2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD34F640E336000DD7DEFEAC /* Pods-GuillotineApp.debug.xcconfig */,
+				229575EC56D78167F47B94BC /* Pods-GuillotineApp.release.xcconfig */,
+				ADD959B756FDDEF8CE50AAFD /* Pods-GuillotineAppTests.debug.xcconfig */,
+				1585BCC944747BCD18E709A7 /* Pods-GuillotineAppTests.release.xcconfig */,
+				67E9A58B63AF39BD6FB76A5D /* Pods-GuillotineAppUITests.debug.xcconfig */,
+				12FE03E090B6046D68AE36FC /* Pods-GuillotineAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1D18BE17BB89289F81FB8F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A9A50C954D3F39CF519571B /* Pods_GuillotineApp.framework */,
+				6BFE59CFD91190EB6ED01E32 /* Pods_GuillotineAppTests.framework */,
+				944930E6A718205CFFE6E53E /* Pods_GuillotineAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6883042D1DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "GuillotineApp" */;
 			buildPhases = (
+				7E41447882A828ADD6B7218C /* [CP] Check Pods Manifest.lock */,
 				688304011DEBEFD900FF59E3 /* Sources */,
 				688304021DEBEFD900FF59E3 /* Frameworks */,
 				688304031DEBEFD900FF59E3 /* Resources */,
+				270E728F808AFCA2A51AFEF3 /* [CP] Embed Pods Frameworks */,
+				E4C67BDF702C5A9CC8BB42BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 688304301DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "GuillotineAppTests" */;
 			buildPhases = (
+				A12FE4E8F6956133464F5EAF /* [CP] Check Pods Manifest.lock */,
 				688304151DEBEFD900FF59E3 /* Sources */,
 				688304161DEBEFD900FF59E3 /* Frameworks */,
 				688304171DEBEFD900FF59E3 /* Resources */,
+				D510294CFE99189A3E13792A /* [CP] Embed Pods Frameworks */,
+				547B9E41699D99ADB209FFA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 688304331DEBEFD900FF59E3 /* Build configuration list for PBXNativeTarget "GuillotineAppUITests" */;
 			buildPhases = (
+				5C3889719FE0E699C4E827AA /* [CP] Check Pods Manifest.lock */,
 				688304201DEBEFD900FF59E3 /* Sources */,
 				688304211DEBEFD900FF59E3 /* Frameworks */,
 				688304221DEBEFD900FF59E3 /* Resources */,
+				911493F2F1609008B47F56DC /* [CP] Embed Pods Frameworks */,
+				DC100E1DF4BBB4F2CFA6CA29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +331,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		270E728F808AFCA2A51AFEF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuillotineApp/Pods-GuillotineApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		547B9E41699D99ADB209FFA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuillotineAppTests/Pods-GuillotineAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C3889719FE0E699C4E827AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E41447882A828ADD6B7218C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		911493F2F1609008B47F56DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuillotineAppUITests/Pods-GuillotineAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A12FE4E8F6956133464F5EAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D510294CFE99189A3E13792A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuillotineAppTests/Pods-GuillotineAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC100E1DF4BBB4F2CFA6CA29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuillotineAppUITests/Pods-GuillotineAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4C67BDF702C5A9CC8BB42BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuillotineApp/Pods-GuillotineApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		688304011DEBEFD900FF59E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,6 +476,7 @@
 			files = (
 				6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */,
 				50FBC2AA1E0915BA000E47DA /* CardButton.swift in Sources */,
+				501FD0D01E5E8A54001F2DF5 /* Backend.swift in Sources */,
 				68325C391DF719A300E7DCDE /* PlayType.swift in Sources */,
 				505B5FB51E012A360086714C /* Game.swift in Sources */,
 				6883043C1DEBF34900FF59E3 /* Suit.swift in Sources */,
@@ -401,6 +592,7 @@
 		};
 		6883042C1DEBEFD900FF59E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229575EC56D78167F47B94BC /* Pods-GuillotineApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -445,6 +637,7 @@
 		};
 		6883042E1DEBEFD900FF59E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD34F640E336000DD7DEFEAC /* Pods-GuillotineApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Guillotine!/Info.plist";
@@ -457,6 +650,7 @@
 		};
 		6883042F1DEBEFD900FF59E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229575EC56D78167F47B94BC /* Pods-GuillotineApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Guillotine!/Info.plist";
@@ -469,6 +663,7 @@
 		};
 		688304311DEBEFD900FF59E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADD959B756FDDEF8CE50AAFD /* Pods-GuillotineAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -483,6 +678,7 @@
 		};
 		688304321DEBEFD900FF59E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1585BCC944747BCD18E709A7 /* Pods-GuillotineAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +693,7 @@
 		};
 		688304341DEBEFD900FF59E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E9A58B63AF39BD6FB76A5D /* Pods-GuillotineAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Guillotine!UITests/Info.plist";
@@ -510,6 +707,7 @@
 		};
 		688304351DEBEFD900FF59E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12FE03E090B6046D68AE36FC /* Pods-GuillotineAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Guillotine!UITests/Info.plist";
