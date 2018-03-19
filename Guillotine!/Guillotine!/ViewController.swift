@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         return button
     }
     
-    func buttonClicked(_ sender: UIButton?) {
+    @objc func buttonClicked(_ sender: UIButton?) {
         if sender?.superview == handContainer {
             handContainer.removeArrangedSubview(sender!)
             playContainer.addArrangedSubview(sender!)
