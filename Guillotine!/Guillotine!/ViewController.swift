@@ -2,7 +2,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,10 +18,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var playContainer: UIStackView!
-    @IBOutlet weak var handContainer: UIStackView!
+    @IBOutlet weak var playContainer: CardContainer!
+    @IBOutlet weak var handContainer: CardContainer!
     @IBOutlet weak var submitPlayButton: UIButton!
-    @IBOutlet weak var previousPlayContainer: UIStackView!
+    @IBOutlet weak var previousPlayContainer: CardContainer!
     
     func someAction(_ sender:UITapGestureRecognizer){
         // do other task
@@ -35,28 +34,19 @@ class ViewController: UIViewController {
 //        hand.layo
         for i in 0..<cards.count {
             let card = cards[i]
-            let button = getCardButton(card: card)
-            button.addTarget(self, action: #selector(ViewController.buttonClicked(_:)), for: .touchUpInside)
+            let button = CardButton(card: card)
+            button.addTarget(self, action: #selector(ViewController.alterCardLocation(_:)), for: .touchUpInside)
             handContainer.addArrangedSubview(button)
         }
     }
     
     @IBAction func playCards(_ sender: Any) {
         let game = Game.instance
-        game.playHand(play: getPlayFromContainer(container: playContainer))
+        game.playHand(play: playContainer.getPlay())
     }
     
-    func getCardButton(card: Card) -> UIButton {
-        let button = CardButton(card: card)
-//        var imageView = UIImageView(frame: CGRect(x: 10, y: 8, width: 10, height: 10));
-        let image = UIImage(named: card.description)
-//        imageView.image = image
-        button.setImage(image, for: UIControlState.normal)
-        
-        return button
-    }
     
-    @objc func buttonClicked(_ sender: UIButton?) {
+    @objc func alterCardLocation(_ sender: UIButton?) {
         if sender?.superview == handContainer {
             handContainer.removeArrangedSubview(sender!)
             playContainer.addArrangedSubview(sender!)
@@ -64,8 +54,8 @@ class ViewController: UIViewController {
             handContainer.addArrangedSubview(sender!)
             playContainer.removeArrangedSubview(sender!)
         }
-        let currentPlay = getPlayFromContainer(container: playContainer)
-        let previousPlay = getPlayFromContainer(container: previousPlayContainer)
+        let currentPlay = playContainer.getPlay()
+        let previousPlay = previousPlayContainer.getPlay()
         if currentPlay.isPlayableOn(previousPlay: previousPlay) {
             submitPlayButton.isEnabled = true
         } else {
@@ -75,30 +65,10 @@ class ViewController: UIViewController {
     
     func populatePreviousPlay(cards: [Card]) {
         for i in 0..<cards.count {
-            let button = getCardButton(card: cards[i])
+            let button = CardButton(card: cards[i])
 //            button.addTarget(self, action: #selector(ViewController.buttonClicked(_:)), for: .touchUpInside)
-            previousPlayContainer.addArrangedSubview(button)
+            previousPlayContainer.addCard(card: button)
         }
-    }
-    
-    func getPlayFromContainer(container: UIStackView) -> Play {
-        let views = container.arrangedSubviews
-        var cards = [Card]()
-        for i in 0..<views.count {
-            let button = views[i] as! CardButton
-            cards.append(button.card)
-        }
-        return Play(cardsToPlay: cards)
-    }
-    
-    func playIsViable(views: [UIView]) -> Bool {
-        let previousPlay = Play(cardsToPlay: [Card]()) //Placeholder
-        var cards = [Card]()
-        for i in 0..<views.count {
-            let button = views[i] as! CardButton
-            cards.append(button.card)
-        }
-        return Play(cardsToPlay: cards).isPlayableOn(previousPlay: previousPlay)
     }
 }
 

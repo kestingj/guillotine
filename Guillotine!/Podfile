@@ -6,7 +6,12 @@ target 'GuillotineApp' do
   use_frameworks!
 
   # Pods for GuillotineApp
-  pod 'Alamofire', '~> 4.3'
+  pod 'Alamofire', '~> 4.7'
+  pod 'UICKeyChainStore', '~> 2.0.6'
+  pod 'AWSCognito', '~> 2.2.5'
+  pod 'FBSDKCoreKit', '~> 4.9'
+  pod 'FBSDKLoginKit', '~> 4.9'
+  pod 'FBSDKShareKit', '~> 4.9'
 
   target 'GuillotineAppTests' do
     inherit! :search_paths
