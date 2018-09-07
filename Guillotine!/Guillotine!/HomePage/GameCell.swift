@@ -10,10 +10,10 @@ import UIKit
 
 class GameCell: UITableViewCell {
     
-    var game: Game
+    var game: Optional<Game>
     
     required init?(coder aDecoder: NSCoder) {
-        self.game = Game()
+        self.game = Optional.none
         super.init(coder: aDecoder)
         
         print ("CODER CONSTRUCTOR")
@@ -35,6 +35,6 @@ class GameCell: UITableViewCell {
     }
     
     func setGame(game: Game) {
-        self.game = game
+        self.game = Optional.some(game)
     }
 }

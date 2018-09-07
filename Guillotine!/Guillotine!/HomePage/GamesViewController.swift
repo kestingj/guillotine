@@ -11,7 +11,7 @@ import UIKit
 class GamesViewController: UITableViewController {
     
     let cellIdentifier = "reuseIdentifier"
-    let loadBalancer = 
+    let loadBalancer = LoadBalancer("playerId") // TODO get from cached state
     
     let names = [
         "Joe", "Micha", "Nick", "Payton", "Austin"
