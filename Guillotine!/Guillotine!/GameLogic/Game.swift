@@ -4,7 +4,34 @@ import Foundation
 
 class Game {
     
-    static let instance = Game()
+    var gameId: String
+    var playerIds: [String]
+    var turn: String
+    var previousPlays: [Play]
+    var sequenceNumber: Int
+    var playersToCardsInHand: [String:Int]
+    var hand: [Card]
+    
+    init(
+        gameId: String,
+        playerIds: [String],
+        turn: String,
+        previousPlays: [Play],
+        sequenceNumber: Int,
+        playersToCardsInHand: [String:Int],
+        hand: [Card]
+    ) {
+        self.gameId = gameId
+        self.playerIds = playerIds
+        self.turn = turn
+        self.previousPlays = previousPlays
+        self.sequenceNumber = sequenceNumber
+        self.playersToCardsInHand = playersToCardsInHand
+        self.hand = hand
+    }
+    
+    static let instance = Game(gameId: "gameId", playerIds: ["jim", "jimmy", "joe"], turn: "joe", previousPlays: [], sequenceNumber: 1, playersToCardsInHand: ["jim": 13, "jimmy":12, "joe": 3], hand: [])
+    let backend = Backend()
     
     func getHand() -> [Card] {
         //stub
@@ -24,6 +51,7 @@ class Game {
     }
     
     func playHand(play: Play) {
+        backend.testGet()
         print(play)
     }
     
