@@ -11,11 +11,13 @@ import UIKit
 class GamesViewController: UITableViewController {
     
     let cellIdentifier = "reuseIdentifier"
-    let loadBalancer = LoadBalancer("playerId") // TODO get from cached state
+    let loadBalancer = LoadBalancer(playerId: "playerId") // TODO get from cached state
     
     let names = [
         "Joe", "Micha", "Nick", "Payton", "Austin"
     ]
+    
+    var games: [GameMetadata] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ class GamesViewController: UITableViewController {
         self.navigationItem.title = "Games"
         
         self.tableView.register(GameCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        games.append(contentsOf: loadBalancer.getAllGames())
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -58,6 +62,14 @@ class GamesViewController: UITableViewController {
 
         cell.textLabel?.text = names[indexPath.row]
         cell.setColor()
+        let gameMetadata = games[indexPath.row]
+        let gameId = gameMetadata.gameId
+        let playerIds = gameMetadata.playerIds
+        let playerId = "playerId" // TODO get cached playerId
+        let backend = Backend()
+        let game = backend.getPlayerState(gameId: gameId, playerId: playerId, playerIds: playerIds)
+        
+        cell.setGame(game: game)
         
         return cell
     }

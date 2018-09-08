@@ -47,17 +47,17 @@ class LoadBalancer {
         let parameters: [String: AnyObject] = ["playerIds": playerIds as AnyObject]
         let request = Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
         
-        var game: GameMetadata
+        var game: Optional<GameMetadata> = Optional.none
         
         request.responseJSON { responseData in
             if let result = responseData.result.value {
                 let JSON = result as! NSDictionary
                 let gameId = JSON.object(forKey: "gameId") as! String
                 let hostName = JSON.object(forKey: "hostName") as! String
-                game = GameMetadata(gameId: gameId, hostName: hostName, playerIds: playerIds)
+                game = Optional.some(GameMetadata(gameId: gameId, hostName: hostName, playerIds: playerIds))
             }
         }
         
-        return game
+        return game!
     }
 }

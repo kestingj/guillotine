@@ -28,6 +28,34 @@ class Backend {
         }
     }
     
+    func getPlayerState(gameId: String, playerId: String, playerIds: [String]) -> Game {
+        let parameters: [String: AnyObject] = ["playerIds": playerIds as AnyObject]
+        
+        let url = urlBase + "/games/" + gameId + "/" + playerId
+        
+        let request = Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default)
+        
+        var game: Optional<Game> = Optional.none
+        request.responseJSON { responseData in
+            if let result = responseData.result.value {
+                let JSON = result as! NSDictionary
+                let turn = JSON.object(forKey: "turn") as! String
+                let hand = JSON.object(forKey: "hand") as! [Card]
+                let playerStates = JSON.object(forKey: "playerStates") as! [NSDictionary]
+                var playersToCardsInHand: [String: Int] = [:]
+                for playerState in playerStates {
+                    playersToCardsInHand[playerState.object(forKey: "playerId") as! String] = playerState.object(forKey: "cardsInHand") as? Int
+                }
+                
+                let previousPlays = JSON.object(forKey: "previousPlays") as! [Play]
+                
+                game = Optional.some(Game(gameId: gameId, playerIds: playerIds, turn: turn, previousPlays: previousPlays, playersToCardsInHand: playersToCardsInHand, hand: hand))
+            }
+        }
+            
+        return game!
+    }
+    
     func startGame(players: [String], startingPlayer: String) -> String {
         let parameters: [String: AnyObject] = ["startingPlayer": startingPlayer as AnyObject, "players": players as AnyObject]
         
