@@ -17,15 +17,16 @@
 		68039544214223FA000B4EB4 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68039543214223FA000B4EB4 /* GameCell.swift */; };
 		6803954721422D23000B4EB4 /* LoadBalancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6803954621422D23000B4EB4 /* LoadBalancer.swift */; };
 		68039549214233D4000B4EB4 /* GameMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68039548214233D4000B4EB4 /* GameMetadata.swift */; };
+		6803954B2144B4A8000B4EB4 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6803954A2144B4A8000B4EB4 /* HomePageViewController.swift */; };
+		6803954D2144B662000B4EB4 /* NewGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6803954C2144B662000B4EB4 /* NewGameButton.swift */; };
 		68252E362107788D0007EC86 /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68252E352107788D0007EC86 /* CardContainer.swift */; };
 		68252E40210D12550007EC86 /* BackendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68252E3F210D12550007EC86 /* BackendTests.swift */; };
 		68252E49210D12EC0007EC86 /* BackendIntegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68252E48210D12EC0007EC86 /* BackendIntegTests.swift */; };
-		68252E4C210D33E90007EC86 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68252E4B210D33E90007EC86 /* HomePageViewController.swift */; };
 		68325C391DF719A300E7DCDE /* PlayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68325C381DF719A300E7DCDE /* PlayType.swift */; };
 		6882FB6B2075248600DDF6CC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6882FB6A2075248600DDF6CC /* Login.storyboard */; };
 		6882FB6D20752F3C00DDF6CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882FB6C20752F3C00DDF6CC /* LoginViewController.swift */; };
 		688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688304081DEBEFD900FF59E3 /* AppDelegate.swift */; };
-		6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883040A1DEBEFD900FF59E3 /* ViewController.swift */; };
+		6883040B1DEBEFD900FF59E3 /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6883040A1DEBEFD900FF59E3 /* ActiveGameViewController.swift */; };
 		6883040E1DEBEFD900FF59E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6883040C1DEBEFD900FF59E3 /* Main.storyboard */; };
 		688304101DEBEFD900FF59E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6883040F1DEBEFD900FF59E3 /* Assets.xcassets */; };
 		688304131DEBEFD900FF59E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688304111DEBEFD900FF59E3 /* LaunchScreen.storyboard */; };
@@ -76,18 +77,19 @@
 		68039543214223FA000B4EB4 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		6803954621422D23000B4EB4 /* LoadBalancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadBalancer.swift; sourceTree = "<group>"; };
 		68039548214233D4000B4EB4 /* GameMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMetadata.swift; sourceTree = "<group>"; };
+		6803954A2144B4A8000B4EB4 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		6803954C2144B662000B4EB4 /* NewGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameButton.swift; sourceTree = "<group>"; };
 		68252E352107788D0007EC86 /* CardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
 		68252E3D210D12550007EC86 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68252E3F210D12550007EC86 /* BackendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendTests.swift; sourceTree = "<group>"; };
 		68252E41210D12550007EC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68252E48210D12EC0007EC86 /* BackendIntegTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendIntegTests.swift; sourceTree = "<group>"; };
-		68252E4B210D33E90007EC86 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		68325C381DF719A300E7DCDE /* PlayType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayType.swift; sourceTree = "<group>"; };
 		6882FB6A2075248600DDF6CC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6882FB6C20752F3C00DDF6CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		688304051DEBEFD900FF59E3 /* GuillotineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuillotineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688304081DEBEFD900FF59E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6883040A1DEBEFD900FF59E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6883040A1DEBEFD900FF59E3 /* ActiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
 		6883040D1DEBEFD900FF59E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6883040F1DEBEFD900FF59E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688304121DEBEFD900FF59E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,8 @@
 			children = (
 				680395412140C866000B4EB4 /* GamesViewController.swift */,
 				68039543214223FA000B4EB4 /* GameCell.swift */,
+				6803954A2144B4A8000B4EB4 /* HomePageViewController.swift */,
+				6803954C2144B662000B4EB4 /* NewGameButton.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -195,8 +199,7 @@
 		68252E4A210D33A70007EC86 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
-				6883040A1DEBEFD900FF59E3 /* ViewController.swift */,
-				68252E4B210D33E90007EC86 /* HomePageViewController.swift */,
+				6883040A1DEBEFD900FF59E3 /* ActiveGameViewController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -647,7 +650,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6883040B1DEBEFD900FF59E3 /* ViewController.swift in Sources */,
+				6803954D2144B662000B4EB4 /* NewGameButton.swift in Sources */,
+				6883040B1DEBEFD900FF59E3 /* ActiveGameViewController.swift in Sources */,
 				50FBC2AA1E0915BA000E47DA /* CardButton.swift in Sources */,
 				680395422140C866000B4EB4 /* GamesViewController.swift in Sources */,
 				501FD0D01E5E8A54001F2DF5 /* Backend.swift in Sources */,
@@ -656,9 +660,9 @@
 				6883043C1DEBF34900FF59E3 /* Suit.swift in Sources */,
 				688304381DEBF15B00FF59E3 /* Play.swift in Sources */,
 				68039549214233D4000B4EB4 /* GameMetadata.swift in Sources */,
+				6803954B2144B4A8000B4EB4 /* HomePageViewController.swift in Sources */,
 				6803954721422D23000B4EB4 /* LoadBalancer.swift in Sources */,
 				688304091DEBEFD900FF59E3 /* AppDelegate.swift in Sources */,
-				68252E4C210D33E90007EC86 /* HomePageViewController.swift in Sources */,
 				6882FB6D20752F3C00DDF6CC /* LoginViewController.swift in Sources */,
 				6883043A1DEBF18F00FF59E3 /* Card.swift in Sources */,
 				68252E362107788D0007EC86 /* CardContainer.swift in Sources */,

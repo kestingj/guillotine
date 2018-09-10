@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f7C-Lv-Jqa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QlL-C0-5m4">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Games View Controller-->
+        <scene sceneID="r6R-hA-jSy">
+            <objects>
+                <viewController id="QlL-C0-5m4" customClass="GamesViewController" customModule="GuillotineApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n85-i7-rXS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qlr-Vi-cDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uf3-Hh-lDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B2R-9m-alr">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QlL-C0-5m4" id="d4z-Wf-3Ex"/>
+                                    <outlet property="delegate" destination="QlL-C0-5m4" id="Lj7-Xh-ny9"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBm-uB-KvJ">
+                                <rect key="frame" x="0.0" y="345" width="667" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.68305771393551584" blue="0.29099292383777708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B2R-9m-alr" firstAttribute="centerY" secondItem="uf3-Hh-lDZ" secondAttribute="centerY" id="4pd-5r-HCT"/>
+                            <constraint firstItem="B2R-9m-alr" firstAttribute="top" secondItem="uf3-Hh-lDZ" secondAttribute="top" id="DL7-ll-80H"/>
+                            <constraint firstItem="B2R-9m-alr" firstAttribute="leading" secondItem="uf3-Hh-lDZ" secondAttribute="leading" id="GKM-qB-RmQ"/>
+                            <constraint firstItem="LBm-uB-KvJ" firstAttribute="bottom" secondItem="uf3-Hh-lDZ" secondAttribute="bottom" id="KnP-2z-sgn"/>
+                            <constraint firstItem="B2R-9m-alr" firstAttribute="centerX" secondItem="uf3-Hh-lDZ" secondAttribute="centerX" id="QaU-RN-q43"/>
+                            <constraint firstItem="LBm-uB-KvJ" firstAttribute="leading" secondItem="uf3-Hh-lDZ" secondAttribute="leading" id="RRO-bp-9N1"/>
+                            <constraint firstItem="B2R-9m-alr" firstAttribute="trailing" secondItem="uf3-Hh-lDZ" secondAttribute="trailing" id="VRf-3b-iph"/>
+                            <constraint firstAttribute="trailing" secondItem="LBm-uB-KvJ" secondAttribute="trailing" id="as4-Yj-6d2"/>
+                            <constraint firstItem="LBm-uB-KvJ" firstAttribute="centerX" secondItem="uf3-Hh-lDZ" secondAttribute="centerX" id="hgn-4a-KRa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gamesView" destination="B2R-9m-alr" id="kec-hy-LvH"/>
+                        <outlet property="newGameButton" destination="LBm-uB-KvJ" id="z3c-D8-6zv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4b-0m-h5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252.32383808095955" y="-679.20000000000005"/>
+        </scene>
+        <!--Active Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuillotineApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActiveGameViewController" id="BYZ-38-t0r" customClass="ActiveGameViewController" customModule="GuillotineApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,12 +81,12 @@
                                     <action selector="playCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LC0-xm-dKz"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f9V-tk-VKi" customClass="CardContainer" customModule="GuillotineApp" customModuleProvider="target">
-                                <rect key="frame" x="86" y="272" width="495" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jv-Pp-WCt" userLabel="PreviousPlay" customClass="CardContainer" customModule="GuillotineApp" customModuleProvider="target">
                                 <rect key="frame" x="86" y="28" width="495" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f9V-tk-VKi" customClass="CardContainer" customModule="GuillotineApp" customModuleProvider="target">
+                                <rect key="frame" x="86" y="289" width="495" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
@@ -48,7 +96,7 @@
                         <outlet property="handContainer" destination="f9V-tk-VKi" id="fTm-DI-QUh"/>
                         <outlet property="playContainer" destination="aaI-F9-pXn" id="xIQ-Ih-Wod"/>
                         <outlet property="previousPlayContainer" destination="3jv-Pp-WCt" id="tLZ-ff-7Ln"/>
-                        <outlet property="submitPlayButton" destination="p9b-pk-r5U" id="9ZA-Lk-oDa"/>
+                        <outlet property="submitPlayButton" destination="p9b-pk-r5U" id="OBd-s0-R31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

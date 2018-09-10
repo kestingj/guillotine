@@ -12,6 +12,11 @@ class GameCell: UITableViewCell {
     
     var game: Optional<Game>
     
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        self.game = Optional.none
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         self.game = Optional.none
         super.init(coder: aDecoder)
@@ -31,10 +36,18 @@ class GameCell: UITableViewCell {
     }
     
     func setColor() {
-        self.backgroundColor = UIColor.red
+        self.backgroundColor = UIColor.blue
     }
     
     func setGame(game: Game) {
         self.game = Optional.some(game)
+        self.textLabel?.lineBreakMode = .byWordWrapping
+        self.contentMode = .scaleToFill
+        self.textLabel?.numberOfLines = 0
+        var players = ""
+        for player in game.playerIds {
+            players += player + " "
+        }
+        self.textLabel?.text = players
     }
 }

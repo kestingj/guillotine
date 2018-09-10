@@ -7,6 +7,12 @@ class Backend {
     
     let urlBase = "http://127.0.0.1:20001"
     let playerId = "playerId1"
+    var hostName: String
+    
+    
+    init(hostName: String) {
+        self.hostName = hostName
+    }
     
     func submitPlay(play: Play, gameId: String) {
         var parameters: [String: AnyObject] = ["playerId": playerId as AnyObject, "gameId":gameId as AnyObject]
@@ -52,8 +58,8 @@ class Backend {
                 game = Optional.some(Game(gameId: gameId, playerIds: playerIds, turn: turn, previousPlays: previousPlays, playersToCardsInHand: playersToCardsInHand, hand: hand))
             }
         }
-            
-        return game!
+        return Game.instance
+//        return game!
     }
     
     func startGame(players: [String], startingPlayer: String) -> String {

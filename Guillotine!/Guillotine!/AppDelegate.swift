@@ -13,13 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let loadBalancer = LoadBalancer(playerId: "playerId")
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        let navController = UINavigationController(rootViewController: GamesViewController())
-        window?.rootViewController = navController
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//        let gameViewController = GamesViewController()
+//        gameViewController.loadGames()
+//        let navController = UINavigationController(rootViewController: GamesViewController())
+//        window?.rootViewController = navController
         return true
     }
 

@@ -38,8 +38,8 @@ class LoadBalancer {
                 }
             }
         }
-        
-        return games
+        return [GameMetadata(gameId: "gameId", hostName: "hostName", playerIds: ["jose", "joe", "joseph"])]
+//        return games
     }
     
     func startNewGame(playerIds: [String]) -> GameMetadata {

@@ -2,15 +2,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ActiveGameViewController: UIViewController {
 
+    var game: Optional<Game> = Optional.none
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let g = self.game!
         submitPlayButton.isEnabled = false
-        let game = Game.instance
-        initializeHand(cards: game.getHand())
+        initializeHand(cards: g.getHand())
         // Do any additional setup after loading the view, typically from a nib.
-        populatePreviousPlay(cards: game.getPreviousPlay())
+        populatePreviousPlay(cards: g.getPreviousPlay())
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,9 +22,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var playContainer: CardContainer!
     @IBOutlet weak var handContainer: CardContainer!
-    @IBOutlet weak var submitPlayButton: UIButton!
+//    @IBOutlet weak var submitPlayButton: UIButton!
     @IBOutlet weak var previousPlayContainer: CardContainer!
     
+    @IBOutlet weak var submitPlayButton: UIButton!
     func someAction(_ sender:UITapGestureRecognizer){
         // do other task
     }
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
         for i in 0..<cards.count {
             let card = cards[i]
             let button = CardButton(card: card)
-            button.addTarget(self, action: #selector(ViewController.alterCardLocation(_:)), for: .touchUpInside)
+            button.addTarget(self, action: #selector(ActiveGameViewController.alterCardLocation(_:)), for: .touchUpInside)
             handContainer.addArrangedSubview(button)
         }
     }
@@ -69,6 +72,10 @@ class ViewController: UIViewController {
 //            button.addTarget(self, action: #selector(ViewController.buttonClicked(_:)), for: .touchUpInside)
             previousPlayContainer.addCard(card: button)
         }
+    }
+    
+    func setGame(game: Game) {
+        self.game = Optional.some(game)
     }
 }
 

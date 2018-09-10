@@ -28,7 +28,6 @@ class Game {
     }
     
     static let instance = Game(gameId: "gameId", playerIds: ["jim", "jimmy", "joe"], turn: "joe", previousPlays: [], playersToCardsInHand: ["jim": 13, "jimmy":12, "joe": 3], hand: [])
-    let backend = Backend()
     
     func getHand() -> [Card] {
         //stub
