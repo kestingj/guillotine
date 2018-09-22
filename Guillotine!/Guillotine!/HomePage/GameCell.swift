@@ -10,7 +10,7 @@ import UIKit
 
 class GameCell: UITableViewCell {
     
-    var game: Optional<Game>
+    var game: Optional<String>
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         self.game = Optional.none
@@ -40,7 +40,7 @@ class GameCell: UITableViewCell {
     }
     
     func setGame(game: Game) {
-        self.game = Optional.some(game)
+        self.game = Optional.some(game.gameId)
         self.textLabel?.lineBreakMode = .byWordWrapping
         self.contentMode = .scaleToFill
         self.textLabel?.numberOfLines = 0

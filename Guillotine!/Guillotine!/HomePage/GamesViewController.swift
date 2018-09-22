@@ -13,13 +13,14 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var gamesView: UITableView!
     let cellIdentifier = "reuseIdentifier"
-    let loadBalancer = LoadBalancer(playerId: "playerId") // TODO get from cached state
+    
+    let gameManager = GameManager.shared
     
     let names = [
         "Joe", "Micha", "Nick", "Payton", "Austin"
     ]
     
-    var games: [GameMetadata] = []
+    var gameIds: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.title = "Games"
-        games.append(contentsOf: loadBalancer.getAllGames())
+        self.gameIds.append(contentsOf: self.gameManager.listGames())
         self.gamesView.register(GameCell.self, forCellReuseIdentifier: cellIdentifier)
         self.gamesView.delegate = self
         self.gamesView.dataSource = self
@@ -59,20 +60,16 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games.count
+        return gameIds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameCell
         cell.textLabel?.text = names[indexPath.row]
         cell.setColor()
-        let gameMetadata = games[indexPath.row]
-        let gameId = gameMetadata.gameId
-        let playerIds = gameMetadata.playerIds
-        let hostName = gameMetadata.hostName
-        let playerId = "playerId" // TODO get cached playerId
-        let backend = Backend(hostName: hostName)
-        let game = backend.getPlayerState(gameId: gameId, playerId: playerId, playerIds: playerIds)
+        let gameId = gameIds[indexPath.row]
+        let game = self.gameManager.getGameInformation(gameId: gameId)
+        
         cell.setGame(game: game)
         
         return cell
@@ -87,23 +84,16 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = self.storyboard!.instantiateViewController(withIdentifier: "ActiveGameViewController") as! ActiveGameViewController
         // TODO factor into its own method
-        let gameMetadata = games[indexPath.row]
-        let gameId = gameMetadata.gameId
-        let playerIds = gameMetadata.playerIds
-        let hostName = gameMetadata.hostName
-        let playerId = "playerId" // TODO get cached playerId
-        let backend = Backend(hostName: hostName)
-        let game = backend.getPlayerState(gameId: gameId, playerId: playerId, playerIds: playerIds)
-        controller.setGame(game: game)
+        let gameId = gameIds[indexPath.row]
+    
+        controller.setGame(gameId: gameId)
         present(controller, animated: true, completion: nil)
     }
     
-    func setGames(gameMetadata: [GameMetadata]) {
-        games = gameMetadata
-    }
-    
-    func loadGames() {
-        games = self.loadBalancer.getAllGames()
+    func update() {
+        gameManager.fetchAndUpdateAllGames()
+        gameIds = gameManager.listGames()
+        gamesView.reloadData()
     }
     
 

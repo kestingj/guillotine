@@ -55,7 +55,7 @@ class Backend {
                 
                 let previousPlays = JSON.object(forKey: "previousPlays") as! [Play]
                 
-                game = Optional.some(Game(gameId: gameId, playerIds: playerIds, turn: turn, previousPlays: previousPlays, playersToCardsInHand: playersToCardsInHand, hand: hand))
+                game = Optional.some(Game(gameId: gameId, playerIds: playerIds, turn: turn, previousPlays: previousPlays, playersToCardsInHand: playersToCardsInHand, hand: hand, hostName: self.hostName))
             }
         }
         return Game.instance

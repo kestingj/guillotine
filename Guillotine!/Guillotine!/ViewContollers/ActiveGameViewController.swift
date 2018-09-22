@@ -4,15 +4,16 @@ import UIKit
 
 class ActiveGameViewController: UIViewController {
 
-    var game: Optional<Game> = Optional.none
+    var gameId: Optional<String> = Optional.none
+    let gameManager = GameManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let g = self.game!
+        let game = self.gameManager.getGameInformation(gameId: self.gameId!)
         submitPlayButton.isEnabled = false
-        initializeHand(cards: g.getHand())
+        initializeHand(cards: game.getHand())
         // Do any additional setup after loading the view, typically from a nib.
-        populatePreviousPlay(cards: g.getPreviousPlay())
+        populatePreviousPlay(cards: game.getPreviousPlay())
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,8 +45,7 @@ class ActiveGameViewController: UIViewController {
     }
     
     @IBAction func playCards(_ sender: Any) {
-        let game = Game.instance
-        game.playHand(play: playContainer.getPlay())
+        self.gameManager.playHand(play: playContainer.getPlay(), gameId: self.gameId!)
     }
     
     
@@ -74,8 +74,8 @@ class ActiveGameViewController: UIViewController {
         }
     }
     
-    func setGame(game: Game) {
-        self.game = Optional.some(game)
+    func setGame(gameId: String) {
+        self.gameId = Optional.some(gameId)
     }
 }
 

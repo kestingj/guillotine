@@ -10,6 +10,7 @@ class Game {
     var previousPlays: [Play]
     var playersToCardsInHand: [String:Int]
     var hand: [Card]
+    var hostName: String
     
     init(
         gameId: String,
@@ -17,7 +18,8 @@ class Game {
         turn: String,
         previousPlays: [Play],
         playersToCardsInHand: [String:Int],
-        hand: [Card]
+        hand: [Card],
+        hostName: String
     ) {
         self.gameId = gameId
         self.playerIds = playerIds
@@ -25,9 +27,10 @@ class Game {
         self.previousPlays = previousPlays
         self.playersToCardsInHand = playersToCardsInHand
         self.hand = hand
+        self.hostName = hostName
     }
     
-    static let instance = Game(gameId: "gameId", playerIds: ["jim", "jimmy", "joe"], turn: "joe", previousPlays: [], playersToCardsInHand: ["jim": 13, "jimmy":12, "joe": 3], hand: [])
+    static let instance = Game(gameId: "gameId", playerIds: ["jim", "jimmy", "joe"], turn: "joe", previousPlays: [], playersToCardsInHand: ["jim": 13, "jimmy":12, "joe": 3], hand: [], hostName: "localhost")
     
     func getHand() -> [Card] {
         //stub
@@ -44,10 +47,6 @@ class Game {
                 Card(rank: 13, suit: Suit.HEART),
                 Card(rank: 12, suit: Suit.CLUB),
                 Card(rank: 11, suit: Suit.CLUB)]
-    }
-    
-    func playHand(play: Play) {
-        print(play)
     }
     
     func getPreviousPlay() -> [Card] {
