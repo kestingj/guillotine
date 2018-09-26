@@ -53,4 +53,8 @@ class Game {
         return [Card(rank: 2, suit: Suit.HEART),
                 Card(rank: 2, suit: Suit.DIAMOND)]
     }
+    
+    func playHand(play: Play) {
+        
+    }
 }

@@ -14,7 +14,7 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var gamesView: UITableView!
     let cellIdentifier = "reuseIdentifier"
     
-    let gameManager = GameManager.shared
+    let gameManager = GameManagerProvider.getShared()
     
     let names = [
         "Joe", "Micha", "Nick", "Payton", "Austin"

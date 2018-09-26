@@ -8,14 +8,14 @@
 
 import Foundation
 
-class GameManager {
+class ProdGameManager : GameManager {
     
-    static let shared = GameManager()
+    static let shared = ProdGameManager()
     
     var games: [String: Game]
     let loadBalancer: LoadBalancer
     
-    private init() {
+    public init() {
         games = [String: Game]()
         self.loadBalancer = LoadBalancer(playerId: "playerId") //TODO get cached playerId
     }

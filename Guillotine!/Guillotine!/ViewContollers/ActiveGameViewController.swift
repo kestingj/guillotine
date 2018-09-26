@@ -5,7 +5,7 @@ import UIKit
 class ActiveGameViewController: UIViewController {
 
     var gameId: Optional<String> = Optional.none
-    let gameManager = GameManager.shared
+    let gameManager = GameManagerProvider.getShared()
     
     override func viewDidLoad() {
         super.viewDidLoad()
