@@ -12,3 +12,16 @@ enum Suit: Int, Comparable {
         return a.rawValue < b.rawValue
     }
 }
+
+extension Suit {
+    static var array: [Suit] {
+        var a: [Suit] = []
+        switch Suit.SPADE {
+        case .SPADE: a.append(.SPADE); fallthrough
+        case .CLUB: a.append(.CLUB); fallthrough
+        case .DIAMOND: a.append(.DIAMOND); fallthrough
+        case .HEART: a.append(.HEART);
+        }
+        return a
+    }
+}

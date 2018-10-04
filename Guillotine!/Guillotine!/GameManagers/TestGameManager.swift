@@ -37,7 +37,11 @@ class TestGameManager: GameManager {
     }
     
     func updateGame(gameId: String) {
+        if (self.games[gameId] == nil) {
+            initializNewGame(gameId: gameId)
+        }
         let game = self.games[gameId]!
+        
         if (game.turn != TestGameManager.PLAYER_ID) {
             playHandForComputer(game: game)
         }
@@ -62,5 +66,29 @@ class TestGameManager: GameManager {
         game.playersToCardsInHand[turn] = game.playersToCardsInHand[turn]! - 1
         let turnIndex = game.playerIds.index(of: turn)!
         game.turn = game.playerIds[(turnIndex + 1) % game.playerIds.count]
+    }
+    
+    private func initializNewGame(gameId: String) {
+        let gameMetadata = self.loadBalancerMap[gameId]!
+        let playerIds = gameMetadata.playerIds
+        var playersToCardsInHand = [String: Int]()
+        for playerId in playerIds {
+            playersToCardsInHand[playerId] = 13
+        }
+        let hand = generateHand()
+        let game = Game(gameId: gameId, playerIds: playerIds, turn: playerIds[0], previousPlays: [Play](), playersToCardsInHand:playersToCardsInHand, hand: hand, hostName: gameMetadata.hostName)
+        self.games[gameId] = game
+    }
+    
+    private func generateHand() -> [Card] {
+        var deck = [Card]()
+        for suit in Suit.array {
+            for rank in 2...1 {
+                deck.append(Card(rank: rank, suit: suit))
+            }
+        }
+        deck.shuffle()
+        let hand = deck[0..<14]
+        return hand.sorted()
     }
 }

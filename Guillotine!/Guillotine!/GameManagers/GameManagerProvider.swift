@@ -9,7 +9,7 @@
 import Foundation
 
 class GameManagerProvider {
-    private static let PROD_MANAGER = true
+    private static let PROD_MANAGER = false
     private static var shared: GameManager? = nil
     
     static func getShared() -> GameManager {
@@ -18,9 +18,16 @@ class GameManagerProvider {
                 shared = ProdGameManager()
             } else {
                 shared = TestGameManager()
+                
             }
+            populateGameManager()
         }
         
         return shared!
+    }
+    
+    static func populateGameManager() {
+        shared?.startNewGame(playerIds: ["Joseph", "Micha", "Nick", "Payton"])
+        shared?.startNewGame(playerIds: ["Joseph", "Alex", "Eli", "Austin"])
     }
 }

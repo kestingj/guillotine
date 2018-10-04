@@ -55,6 +55,9 @@ class Game {
     }
     
     func playHand(play: Play) {
-        
+        for card in play.cards {
+            let index = self.hand.index(of: card)!
+            self.hand.remove(at: index)
+        }
     }
 }
