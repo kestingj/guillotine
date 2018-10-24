@@ -30,28 +30,17 @@ class Game {
         self.hostName = hostName
     }
     
-    static let instance = Game(gameId: "gameId", playerIds: ["jim", "jimmy", "joe"], turn: "joe", previousPlays: [], playersToCardsInHand: ["jim": 13, "jimmy":12, "joe": 3], hand: [], hostName: "localhost")
-    
     func getHand() -> [Card] {
         //stub
-        return [Card(rank: 2, suit: Suit.SPADE),
-                Card(rank: 2, suit: Suit.SPADE),
-                Card(rank: 3, suit: Suit.CLUB),
-                Card(rank: 3, suit: Suit.SPADE),
-                Card(rank: 4, suit: Suit.CLUB),
-                Card(rank: 4, suit: Suit.SPADE),
-                Card(rank: 7, suit: Suit.SPADE),
-                Card(rank: 7, suit: Suit.DIAMOND),
-                Card(rank: 7, suit: Suit.CLUB),
-                Card(rank: 13, suit: Suit.CLUB),
-                Card(rank: 13, suit: Suit.HEART),
-                Card(rank: 12, suit: Suit.CLUB),
-                Card(rank: 11, suit: Suit.CLUB)]
+        return hand
     }
     
     func getPreviousPlay() -> [Card] {
-        return [Card(rank: 2, suit: Suit.HEART),
-                Card(rank: 2, suit: Suit.DIAMOND)]
+        if previousPlays.isEmpty {
+            return [Card]()
+        } else {
+            return previousPlays[previousPlays.count - 1].cards
+        }
     }
     
     func playHand(play: Play) {
@@ -59,5 +48,13 @@ class Game {
             let index = self.hand.index(of: card)!
             self.hand.remove(at: index)
         }
+        let playerId = self.playerIds[0]
+        
+        self.playersToCardsInHand[playerId] = self.playersToCardsInHand[playerId]! - play.cards.count
+        
+        let playerIndex = self.playerIds.index(of: playerId)!
+        self.turn = self.playerIds[(playerIndex + 1) % self.playerIds.count]
+        
+        previousPlays.append(play)
     }
 }

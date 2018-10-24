@@ -19,9 +19,12 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let names = [
         "Joe", "Micha", "Nick", "Payton", "Austin"
     ]
-    
-    var gameIds: [String] = []
 
+    override func loadView() {
+        super.loadView()
+        update()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,7 +34,6 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.title = "Games"
-        self.gameIds.append(contentsOf: self.gameManager.listGames())
         self.gamesView.register(GameCell.self, forCellReuseIdentifier: cellIdentifier)
         self.gamesView.delegate = self
         self.gamesView.dataSource = self
@@ -60,14 +62,14 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameIds.count
+        return self.gameManager.listGames().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameCell
         cell.textLabel?.text = names[indexPath.row]
         cell.setColor()
-        let gameId = gameIds[indexPath.row]
+        let gameId = self.gameManager.listGames()[indexPath.row]
         let game = self.gameManager.getGameInformation(gameId: gameId)
         
         cell.setGame(game: game)
@@ -84,7 +86,7 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = self.storyboard!.instantiateViewController(withIdentifier: "ActiveGameViewController") as! ActiveGameViewController
         // TODO factor into its own method
-        let gameId = gameIds[indexPath.row]
+        let gameId = self.gameManager.listGames()[indexPath.row]
     
         controller.setGame(gameId: gameId)
         present(controller, animated: true, completion: nil)
@@ -92,7 +94,6 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func update() {
         gameManager.fetchAndUpdateAllGames()
-        gameIds = gameManager.listGames()
         gamesView.reloadData()
     }
     

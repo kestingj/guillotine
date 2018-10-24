@@ -14,6 +14,7 @@ class ActiveGameViewController: UIViewController {
         initializeHand(cards: game.getHand())
         // Do any additional setup after loading the view, typically from a nib.
         populatePreviousPlay(cards: game.getPreviousPlay())
+        initializePlayerProfiles()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +22,9 @@ class ActiveGameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var player4View: PlayerView!
+    @IBOutlet weak var player3View: PlayerView!
+    @IBOutlet weak var player2View: PlayerView!
     @IBOutlet weak var playContainer: CardContainer!
     @IBOutlet weak var handContainer: CardContainer!
 //    @IBOutlet weak var submitPlayButton: UIButton!
@@ -40,12 +44,13 @@ class ActiveGameViewController: UIViewController {
             let card = cards[i]
             let button = CardButton(card: card)
             button.addTarget(self, action: #selector(ActiveGameViewController.alterCardLocation(_:)), for: .touchUpInside)
-            handContainer.addArrangedSubview(button)
+            handContainer.addCard(card: button)
         }
     }
     
     @IBAction func playCards(_ sender: Any) {
         self.gameManager.playHand(play: playContainer.getPlay(), gameId: self.gameId!)
+        updateContainers()
     }
     
     
@@ -76,6 +81,49 @@ class ActiveGameViewController: UIViewController {
     
     func setGame(gameId: String) {
         self.gameId = Optional.some(gameId)
+    }
+    
+    @IBAction func refresh(_ sender: UIButton) {
+        print(self.gameId!)
+        self.gameManager.updateGame(gameId: self.gameId!)
+        updateContainers()
+        updateHandCounts()
+    }
+    
+    func updateContainers() {
+        playContainer.clear()
+        previousPlayContainer.clear()
+        populatePreviousPlay(cards: self.gameManager.getGameInformation(gameId: self.gameId!).getPreviousPlay())
+    }
+    
+    func initializePlayerProfiles() {
+        let game = self.gameManager.getGameInformation(gameId: self.gameId!)
+        let player2 = getPlayerAtIndex(index: 2)
+        player2View.setPlayer(playerId: player2, handCount: game.playersToCardsInHand[player2]!)
+        let player3 = getPlayerAtIndex(index: 3)
+        player3View.setPlayer(playerId: player3, handCount: game.playersToCardsInHand[player3]!)
+        let player4 = getPlayerAtIndex(index: 4)
+        player4View.setPlayer(playerId: player4, handCount: game.playersToCardsInHand[player4]!)
+    }
+    
+    func updateHandCounts() {
+        let game = self.gameManager.getGameInformation(gameId: self.gameId!)
+        print (game.playersToCardsInHand)
+        let player2 = getPlayerAtIndex(index: 2)
+        player2View.setCount(handCount: game.playersToCardsInHand[player2]!)
+        let player3 = getPlayerAtIndex(index: 3)
+        player3View.setCount(handCount: game.playersToCardsInHand[player3]!)
+        let player4 = getPlayerAtIndex(index: 4)
+        player4View.setCount(handCount: game.playersToCardsInHand[player4]!)
+    }
+    
+    // Indices: 2, 3, 4
+    private func getPlayerAtIndex(index: Int) -> String {
+        let game = self.gameManager.getGameInformation(gameId: self.gameId!)
+        let arrayIndex = index - 1
+        let selfIndex = game.playerIds.index(of: "Joseph")!
+        let playerIndex = (selfIndex + arrayIndex) % game.playerIds.count
+        return game.playerIds[playerIndex]
     }
 }
 

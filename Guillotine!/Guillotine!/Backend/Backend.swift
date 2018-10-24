@@ -58,8 +58,8 @@ class Backend {
                 game = Optional.some(Game(gameId: gameId, playerIds: playerIds, turn: turn, previousPlays: previousPlays, playersToCardsInHand: playersToCardsInHand, hand: hand, hostName: self.hostName))
             }
         }
-        return Game.instance
-//        return game!
+       
+        return game!
     }
     
     func startGame(players: [String], startingPlayer: String) -> String {

@@ -24,5 +24,10 @@ class CardContainer: UIStackView {
         addArrangedSubview(card)
     }
     
-    
+    func clear() {
+        for view in arrangedSubviews {
+            view.removeFromSuperview()
+            removeArrangedSubview(view)
+        }
+    }
 }

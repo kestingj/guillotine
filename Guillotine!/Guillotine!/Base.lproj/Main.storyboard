@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QlL-C0-5m4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QlL-C0-5m4">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,26 +82,52 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jv-Pp-WCt" userLabel="PreviousPlay" customClass="CardContainer" customModule="GuillotineApp" customModuleProvider="target">
-                                <rect key="frame" x="86" y="28" width="495" height="110"/>
+                                <rect key="frame" x="86" y="73" width="495" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f9V-tk-VKi" customClass="CardContainer" customModule="GuillotineApp" customModuleProvider="target">
                                 <rect key="frame" x="86" y="289" width="495" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVJ-om-9go">
+                                <rect key="frame" x="606" y="8" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GrS-MR-wYH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUV-sp-hya" customClass="PlayerView" customModule="GuillotineApp" customModuleProvider="target">
+                                <rect key="frame" x="573" y="58" width="74" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-Wb-UNu" customClass="PlayerView" customModule="GuillotineApp" customModuleProvider="target">
+                                <rect key="frame" x="296" y="8" width="74" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2u-6c-gKP" customClass="PlayerView" customModule="GuillotineApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="58" width="74" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="Player2View" destination="q2u-6c-gKP" id="1ud-jf-C0S"/>
                         <outlet property="handContainer" destination="f9V-tk-VKi" id="fTm-DI-QUh"/>
                         <outlet property="playContainer" destination="aaI-F9-pXn" id="xIQ-Ih-Wod"/>
+                        <outlet property="player3View" destination="eG5-Wb-UNu" id="BTN-yt-zl2"/>
+                        <outlet property="player4View" destination="tUV-sp-hya" id="W1H-xD-Aui"/>
                         <outlet property="previousPlayContainer" destination="3jv-Pp-WCt" id="tLZ-ff-7Ln"/>
                         <outlet property="submitPlayButton" destination="p9b-pk-r5U" id="OBd-s0-R31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="26"/>
+            <point key="canvasLocation" x="97.601199400299862" y="24.800000000000001"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="iSU-FA-JR2">

@@ -11,8 +11,7 @@ import Foundation
 class TestGameManager: GameManager {
     
     
-    private static let PLAYER_ID = "Arnold"
-    private static let TEST_PLAYER_IDS = [PLAYER_ID, "Alex", "Eli", "Marcel"]
+    private static let PLAYER_ID = "Joseph"
     
     var games: [String: Game]
     var loadBalancerMap: [String: GameMetadata]
@@ -27,17 +26,20 @@ class TestGameManager: GameManager {
     }
     
     func listGames() -> [String] {
+        print(games)
         return Array(self.games.keys)
     }
     
     func fetchAndUpdateAllGames() {
-        for gameId in games.keys {
+        print("fetch")
+        for gameId in loadBalancerMap.keys {
             updateGame(gameId: gameId)
         }
     }
     
     func updateGame(gameId: String) {
         if (self.games[gameId] == nil) {
+            print("init")
             initializNewGame(gameId: gameId)
         }
         let game = self.games[gameId]!
@@ -53,7 +55,7 @@ class TestGameManager: GameManager {
     
     func startNewGame(playerIds: [String]) {
         let gameId = UUID.init().uuidString
-        loadBalancerMap[gameId] = GameMetadata(gameId: gameId, hostName: "hostName", playerIds: TestGameManager.TEST_PLAYER_IDS)
+        loadBalancerMap[gameId] = GameMetadata(gameId: gameId, hostName: "hostName", playerIds: playerIds)
     }
     
     func playHand(play: Play, gameId: String) {
@@ -83,7 +85,7 @@ class TestGameManager: GameManager {
     private func generateHand() -> [Card] {
         var deck = [Card]()
         for suit in Suit.array {
-            for rank in 2...1 {
+            for rank in 2...14 {
                 deck.append(Card(rank: rank, suit: suit))
             }
         }
