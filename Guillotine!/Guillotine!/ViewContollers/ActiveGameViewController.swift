@@ -93,7 +93,14 @@ class ActiveGameViewController: UIViewController {
     func updateContainers() {
         playContainer.clear()
         previousPlayContainer.clear()
-        populatePreviousPlay(cards: self.gameManager.getGameInformation(gameId: self.gameId!).getPreviousPlay())
+        let game = self.gameManager.getGameInformation(gameId: self.gameId!)
+        populatePreviousPlay(cards: game.getPreviousPlay())
+        getPlayerViewForPlayer(player: game.turn).boldPlayer()
+        for playerId in game.playerIds {
+            if (playerId != "Joseph" && playerId != game.turn) {
+                getPlayerViewForPlayer(player: playerId).unboldPlayer()
+            }
+        }
     }
     
     func initializePlayerProfiles() {
@@ -124,6 +131,20 @@ class ActiveGameViewController: UIViewController {
         let selfIndex = game.playerIds.index(of: "Joseph")!
         let playerIndex = (selfIndex + arrayIndex) % game.playerIds.count
         return game.playerIds[playerIndex]
+    }
+    
+    private func getPlayerViewForPlayer(player: String) -> PlayerView {
+        let game = self.gameManager.getGameInformation(gameId: self.gameId!)
+        let selfIndex = game.playerIds.index(of: "Joseph")!
+        let playerIndex = game.playerIds.index(of: player)!
+        let spacesFromSelf = (((playerIndex - selfIndex) + 4) % 4)
+        if spacesFromSelf == 1 {
+            return player2View
+        } else if spacesFromSelf == 2 {
+            return player3View
+        } else { // Should check if index is 3, throw in last else clause
+            return player4View
+        }
     }
 }
 

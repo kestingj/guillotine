@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerView: UIView {
     private static let HAND_COUNT_TAG = 0xDEADBEEF
+    private static let IMAGE_VIEW_TAG = 0xFFFFFFFF
     
     
     
@@ -22,6 +23,10 @@ class PlayerView: UIView {
     
     func setPlayer(playerId: String, handCount: Int) {
         let playerImageView = getPlayerImageView(playerId: playerId)
+        playerImageView.layer.masksToBounds=true
+        playerImageView.layer.borderWidth=1.5
+        playerImageView.layer.borderColor = UIColor.white.cgColor
+        playerImageView.tag = PlayerView.IMAGE_VIEW_TAG
         addSubview(playerImageView)
         let playerIdView = UITextView()
         playerIdView.text = playerId
@@ -62,6 +67,18 @@ class PlayerView: UIView {
     func setCount(handCount: Int) {
         if let countView = self.viewWithTag(PlayerView.HAND_COUNT_TAG) as? UITextView {
             countView.text = handCount.description
+        }
+    }
+    
+    func boldPlayer() {
+        if let playerImageView = self.viewWithTag(PlayerView.IMAGE_VIEW_TAG) as? UIImageView {
+            playerImageView.layer.borderColor = UIColor.black.cgColor
+        }
+    }
+    
+    func unboldPlayer() {
+        if let playerImageView = self.viewWithTag(PlayerView.IMAGE_VIEW_TAG) as? UIImageView {
+            playerImageView.layer.borderColor = UIColor.white.cgColor
         }
     }
     
