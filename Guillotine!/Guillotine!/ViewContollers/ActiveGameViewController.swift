@@ -30,6 +30,8 @@ class ActiveGameViewController: UIViewController {
 //    @IBOutlet weak var submitPlayButton: UIButton!
     @IBOutlet weak var previousPlayContainer: CardContainer!
     
+    
+    
     @IBOutlet weak var submitPlayButton: UIButton!
     func someAction(_ sender:UITapGestureRecognizer){
         // do other task
@@ -105,6 +107,8 @@ class ActiveGameViewController: UIViewController {
     
     func initializePlayerProfiles() {
         let game = self.gameManager.getGameInformation(gameId: self.gameId!)
+        print(game.playersToCardsInHand)
+        print(game.playerIds)
         let player2 = getPlayerAtIndex(index: 2)
         player2View.setPlayer(playerId: player2, handCount: game.playersToCardsInHand[player2]!)
         let player3 = getPlayerAtIndex(index: 3)
